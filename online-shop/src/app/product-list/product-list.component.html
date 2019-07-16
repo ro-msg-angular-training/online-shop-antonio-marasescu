@@ -18,8 +18,8 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>
-      <button type="button" class="ml-1 btn btn-primary" (click)="gotoDetails(product)"><i
-        class="fa fa-angle-double-right"></i></button>
+      <a type="button" class="ml-1 btn btn-primary" routerLink="/product/{{product.id}}"><i
+        class="fa fa-angle-double-right"></i></a>
     </td>
   </tr>
   </tbody>

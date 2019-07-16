@@ -1,4 +1,6 @@
-export const productsMockup = [
+import {Product} from './product';
+
+export const productsMockup: Product[] = [
   {
     id: 0,
     name: 'Iphone',

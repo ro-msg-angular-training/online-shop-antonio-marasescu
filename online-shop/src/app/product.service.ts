@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Product} from './product'
 import {productsMockup} from './products-mockup';
+import {Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,11 @@ export class ProductService {
   constructor() {
   }
 
-  getAllProducts(): Product[] {
-    return productsMockup;
+  getAllProducts(): Observable<Product[]> {
+    return of(productsMockup);
   }
 
-  getProduct(id: number): Product {
-    return productsMockup.filter(x => x.id === id)[0];
+  getProduct(id: number): Observable<Product> {
+    return of(productsMockup.find(x => x.id === id));
   }
 }
