@@ -5,7 +5,8 @@ import {AppComponent} from './app.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {AppRoutingModule} from './app-routing.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
