@@ -1,0 +1,14 @@
+<div>
+  <h1>Product: {{product.name}}</h1>
+  <div class="float-right">
+    <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
+    <button type="button" class="ml-md-2 btn btn-danger" (click)="delete()">Delete</button>
+  </div>
+</div>
+<p>Name {{product.name}}</p>
+<img src="https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/w_799,c_limit/iphonex-TA.jpg"
+     width="250px"
+     class="img-thumbnail float-right" alt="A overpriced Phone">
+<p>Category {{product.category}}</p>
+<p>Price {{product.price}}</p>
+<p>Description {{product.description}}</p>

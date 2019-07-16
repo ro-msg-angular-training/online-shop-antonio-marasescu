@@ -1,0 +1,26 @@
+<h1>Products</h1>
+<span class="float-right mb-md-2">
+    <button type="button" class="btn btn-primary" (click)="gotoCart()"><i class="fa fa-shopping-cart"></i></button>
+    <button type="button" class="ml-md-2 mr-md-2 btn btn-primary" (click)="gotoAdd()">ADD</button>
+  </span>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Category</th>
+    <th scope="col">Product Name</th>
+    <th scope="col">Price</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{product.category}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>
+      <button type="button" class="ml-1 btn btn-primary" (click)="gotoDetails(product)"><i
+        class="fa fa-angle-double-right"></i></button>
+    </td>
+  </tr>
+  </tbody>
+</table>
