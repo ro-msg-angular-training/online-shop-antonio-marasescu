@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Product} from './product';
-import {productsMockup} from './products-mockup';
 import {Observable, of} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 
@@ -19,5 +18,9 @@ export class ProductService {
 
   getProduct(id: number): Observable<Product> {
     return this.http.get<Product>(this.productsUrl + '/' + id);
+  }
+
+  removeProduct(id: number): void {
+    this.http.delete(this.productsUrl + '/' + id);
   }
 }
