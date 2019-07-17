@@ -1,7 +1,8 @@
 <div class="container" *ngIf="products">
   <h1>Products</h1>
   <span class="float-right mb-md-2">
-    <a type="button" class="btn btn-secondary" routerLink="/cart"><i class="fa fa-shopping-cart"></i></a>
+    <button type="button" class="btn btn-secondary" routerLink="./add">Create Product</button>
+    <a type="button" class="btn btn-secondary ml-md-1" routerLink="/cart"><i class="fa fa-shopping-cart"></i></a>
   </span>
   <app-product-table [dataList]="products" [headers]="['Category', 'Product Name', 'Price', '']"></app-product-table>
 </div>

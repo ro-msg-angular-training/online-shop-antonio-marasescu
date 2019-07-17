@@ -1,19 +1,19 @@
-<table class="table" >
+<table class="table">
   <thead class="thead-dark">
-    <tr>
-      <th *ngFor="let header of headers">{{header}}</th>
-    </tr>
+  <tr>
+    <th *ngFor="let header of headers">{{header}}</th>
+  </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let data of dataList">
-      <td>{{data.category}}</td>
-      <td>{{data.name}}</td>
-      <td>{{data.price}}</td>
-      <td>
-        <a type="button" class="ml-1 btn btn-primary" routerLink="/products/{{data.id}}"><i
-          class="fa fa-angle-double-right"></i></a>
-      </td>
+  <tr *ngFor="let data of dataList">
+    <td>{{data.category}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.price}}</td>
+    <td>
+      <a type="button" class="ml-1 btn btn-primary" routerLink="/products/{{data.id}}"><i
+        class="fa fa-angle-double-right"></i></a>
+    </td>
 
-    </tr>
+  </tr>
   </tbody>
 </table>

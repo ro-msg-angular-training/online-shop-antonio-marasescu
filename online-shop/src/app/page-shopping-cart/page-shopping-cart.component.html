@@ -1,32 +1,42 @@
-<div class="container" *ngIf="shoppingCartItems">
+<div class="container">
   <h1>Shopping Cart</h1>
+  <div *ngIf="shoppingCartItems.length>0; else emptyCartBlock">
   <span class="float-right mb-md-2">
-    <a type="button" class="btn btn-success text-light">Checkout</a>
+    <a type="button" class="btn btn-success text-light" (click)="checkoutOrder()">Checkout</a>
   </span>
-  <table class="table">
-    <thead class="thead-dark">
-    <tr>
-      <th>Category</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let data of shoppingCartItems" >
-      <td>{{data.product.category}}</td>
-      <td>{{data.product.name}}</td>
-      <td>{{data.product.price}}</td>
-      <td class="input-group input-group-sm mb-3">
-        <input type="text" value="{{data.quantity}}" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-      </td>
-      <td>
-        <a type="button" class="ml-1 btn btn-primary" routerLink="/products/{{data.id}}"><i
-          class="fa fa-close"></i></a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>Category</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of shoppingCartItems">
+        <td>{{data.product.category}}</td>
+        <td>{{data.product.name}}</td>
+        <td>{{data.product.price}}</td>
+        <td class="input-group input-group-sm mb-3">
+          <div>
+            <i class="fa fa-chevron-left ml-md-4"
+               (click)="decrementQuantity(data.product.id)"></i>   {{data.quantity}}
+            <i class="fa fa-chevron-right mr-md-4" (click)="incrementQuantity(data.product.id)"></i>
+          </div>
+        </td>
+        <td>
+          <button type="button" class="ml-1 btn btn-danger" (click)="removeItem(data.product.id)"><i
+            class="fa fa-close"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #emptyCartBlock>
+    <div class="alert alert-warning" role="alert">
+      The cart is empty!
+    </div>
+  </ng-template>
 </div>

@@ -11,6 +11,10 @@ import {PageProductDetailsComponent} from './page-product-details/page-product-d
 import {PageProductListComponent} from './page-product-list/page-product-list.component';
 import {ProductTableComponent} from './page-product-list/product-table/product-table.component';
 import {PageShoppingCartComponent} from './page-shopping-cart/page-shopping-cart.component';
+import {PageProductEditComponent} from './page-product-edit/page-product-edit.component';
+import {PageProductAddComponent} from './page-product-add/page-product-add.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {ProductFormComponent} from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,16 @@ import {PageShoppingCartComponent} from './page-shopping-cart/page-shopping-cart
     PageProductDetailsComponent,
     PageProductListComponent,
     ProductTableComponent,
-    PageShoppingCartComponent
+    PageShoppingCartComponent,
+    PageProductEditComponent,
+    PageProductAddComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

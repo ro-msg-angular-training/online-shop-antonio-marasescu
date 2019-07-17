@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from "../product";
-import {ActivatedRoute} from "@angular/router";
+import {Product} from "../models/product";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ProductService} from "../product.service";
 import {ShoppingCartService} from "../shopping-cart.service";
 
@@ -15,6 +15,7 @@ export class PageProductDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private productService: ProductService,
     private shoppingCartService: ShoppingCartService) {
   }
@@ -29,7 +30,7 @@ export class PageProductDetailsComponent implements OnInit {
   }
 
   delete(): void {
-    this.productService.removeProduct(this.product.id);
+    this.productService.removeProduct(this.product.id).subscribe(() => this.router.navigateByUrl('/products'));
   }
 
   edit(): void {

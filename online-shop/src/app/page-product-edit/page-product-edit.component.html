@@ -1,0 +1,4 @@
+<div class="container" *ngIf="product">
+  <h1>Product Edit</h1>
+  <app-product-form [product]="product" (submitProductData)="editProduct($event)"></app-product-form>
+</div>

@@ -1,0 +1,51 @@
+<form [formGroup]="productForm" (ngSubmit)="submitFormData()">
+
+  <div class="form-group">
+    <label for="productNameInput">Product Name</label>
+    <input type="text" class="form-control" id="productNameInput" placeholder="Enter a product name"
+           formControlName="productName">
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="productName.errors?.required">
+    The Product Name is required!
+  </div>
+
+  <div class="form-group">
+    <label for="productCategoryInput">Product Category</label>
+    <input type="text" class="form-control" id="productCategoryInput" placeholder="Enter a product category"
+           formControlName="productCategory">
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="productCategory.errors?.required">
+    The Product Category is required!
+  </div>
+
+  <div class="form-group">
+    <label for="productImageLinkInput">Image link</label>
+    <input type="text" class="form-control" id="productImageLinkInput" placeholder="Enter an image link"
+           formControlName="productImageLink">
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="productImageLink.errors?.required">
+    The Product Image Link is required!
+  </div>
+
+  <div class="form-group">
+    <label for="productPriceInput">Product price</label>
+    <input type="text" class="form-control" id="productPriceInput" placeholder="Enter a product price"
+           formControlName="productPrice">
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="productPrice.errors?.required || productPrice.errors?.pattern">
+    <div *ngIf="productPrice.errors?.required">
+      The Product Price is required!
+    </div>
+    <div *ngIf="productPrice.errors?.pattern">
+      The Product Price should be a number!
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="productDescriptionInput">Product Description</label>
+    <textarea class="form-control" id="productDescriptionInput" rows="5"
+              formControlName="productDescription"></textarea>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="goBack()">Cancel</button>
+  <button type="submit" class="btn btn-primary ml-md-2" [disabled]="!productForm.valid">Save</button>
+</form>
