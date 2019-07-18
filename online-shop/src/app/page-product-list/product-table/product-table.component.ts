@@ -6,14 +6,10 @@ import {Product} from '../../models/product';
   templateUrl: './product-table.component.html',
   styleUrls: ['./product-table.component.css']
 })
-export class ProductTableComponent implements OnInit {
+export class ProductTableComponent {
   @Input() headers: string[];
   @Input() dataList: Product[];
 
   constructor() {
   }
-
-  ngOnInit() {
-  }
-
 }

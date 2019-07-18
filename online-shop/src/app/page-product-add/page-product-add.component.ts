@@ -8,13 +8,10 @@ import {Location} from '@angular/common';
   templateUrl: './page-product-add.component.html',
   styleUrls: ['./page-product-add.component.css']
 })
-export class PageProductAddComponent implements OnInit {
+export class PageProductAddComponent {
 
   constructor(private productService: ProductService,
               private location: Location) {
-  }
-
-  ngOnInit() {
   }
 
   createProduct(product: Product) {

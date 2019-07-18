@@ -5,12 +5,13 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {OrderInput} from '../models/order-input';
 import {AppConfig} from '../app.config';
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCartService {
-  private shoppingCart: ShoppingCartItem[] = [];
+  private shoppingCart: Map<number, ShoppingCartItem> = new Map<number, ShoppingCartItem>();
   private ordersUrl = AppConfig.API_ENDPOINT + '/orders';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -18,22 +19,22 @@ export class ShoppingCartService {
     })
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private authService: AuthService) {
   }
 
   getShoppingCartItems(): ShoppingCartItem[] {
-    return this.shoppingCart;
+    return Array.from(this.shoppingCart.values());
   }
 
+  clearShoppingCart() {
+    this.shoppingCart.clear();
+  }
 
   placeOrder(): Observable<{}> {
     const order = new OrderInput();
-    order.customer = 'doej';
-    order.products = [];
-    for (const item of this.shoppingCart) {
-      order.products.push({productId: item.product.id, quantity: item.quantity});
-    }
-    this.shoppingCart = [];
+    order.customer = this.authService.user.username;
+    order.products = this.getShoppingCartItems().map((item) => ({productId: item.product.id, quantity: item.quantity}));
     return this.http.post<OrderInput>(this.ordersUrl, order, this.httpOptions);
   }
 
@@ -41,20 +42,15 @@ export class ShoppingCartService {
     const shoppingCartItem = new ShoppingCartItem();
     shoppingCartItem.product = product;
     shoppingCartItem.quantity = 1;
-    const existingElement = this.shoppingCart.find(x => x.product.id === product.id);
-    if (existingElement) {
-      existingElement.quantity += 1;
-    } else {
-      this.shoppingCart = this.shoppingCart.concat([shoppingCartItem]);
-    }
+    this.shoppingCart.set(product.id, shoppingCartItem);
   }
 
   removeItem(productId: number): void {
-    this.shoppingCart = this.shoppingCart.filter(x => x.product.id !== productId);
+    this.shoppingCart.delete(productId);
   }
 
   modifyQuantity(productId: number, incrementedValue: number): void {
-    const existingElement = this.shoppingCart.find(x => x.product.id === productId);
+    const existingElement = this.shoppingCart.get(productId);
     if (existingElement) {
       existingElement.quantity += incrementedValue;
     }

@@ -10,36 +10,18 @@ import {HttpErrorResponse} from "@angular/common/http";
   templateUrl: './page-login.component.html',
   styleUrls: ['./page-login.component.css']
 })
-export class PageLoginComponent implements OnInit {
+export class PageLoginComponent {
 
-  private loginForm = this.formBuilder.group({
-    username: new FormControl('', [
-      Validators.required
-    ]),
-    password: new FormControl('', [
-      Validators.required
-    ])
-  });
+
   private errorMessage: HttpErrorResponse;
 
-  get username() {
-    return this.loginForm.get('username');
-  }
 
-  get password() {
-    return this.loginForm.get('password');
-  }
-
-  constructor(private formBuilder: FormBuilder,
-              private router: Router,
+  constructor(private router: Router,
               private authService: AuthService) {
   }
 
-  ngOnInit() {
-  }
-
-  submit() {
-    this.authService.authenticate(this.username.value, this.password.value)
+  submit(payload) {
+    this.authService.authenticate(payload.username, payload.password)
       .subscribe((user: AuthUser) => {
         this.authService.user = user;
         return this.router.navigateByUrl('');

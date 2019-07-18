@@ -24,7 +24,7 @@ export class PageShoppingCartComponent implements OnInit {
   }
 
   checkoutOrder(): void {
-    this.shoppingCartService.placeOrder().subscribe();
+    this.shoppingCartService.placeOrder().subscribe(() => this.shoppingCartService.clearShoppingCart());
     this.loadShoppingCart();
   }
 

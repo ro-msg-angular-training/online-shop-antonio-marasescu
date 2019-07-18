@@ -3,7 +3,7 @@ import {Product} from '../models/product';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from '../services/product.service';
 import {ShoppingCartService} from '../services/shopping-cart.service';
-import {AuthService} from "../services/auth.service";
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-page-product-details',
@@ -29,7 +29,7 @@ export class PageProductDetailsComponent implements OnInit {
   }
 
   getProduct(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = parseInt(this.route.snapshot.paramMap.get('id'), 10);
     this.productService.getProduct(id).subscribe(product => this.product = product);
   }
 

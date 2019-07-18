@@ -9,7 +9,8 @@
       <button *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-danger float-right" data-toggle="modal"
               data-target="#confirmationModal">Delete
       </button>
-      <a *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right" routerLink="./edit">Edit</a>
+      <a *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right"
+         routerLink="./edit">Edit</a>
       <button type="button" class="btn btn-primary float-right" (click)="addToCart()">Add to Cart</button>
     </div>
   </div>

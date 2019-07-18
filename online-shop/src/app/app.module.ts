@@ -15,7 +15,9 @@ import {PageProductEditComponent} from './page-product-edit/page-product-edit.co
 import {PageProductAddComponent} from './page-product-add/page-product-add.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ProductFormComponent} from './product-form/product-form.component';
-import { PageLoginComponent } from './page-login/page-login.component';
+import {PageLoginComponent} from './page-login/page-login.component';
+import {LoginFormComponent} from './page-login/login-form/login-form.component';
+import {ShoppingCartTableComponent} from './page-shopping-cart/shopping-cart-table/shopping-cart-table.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { PageLoginComponent } from './page-login/page-login.component';
     PageProductEditComponent,
     PageProductAddComponent,
     ProductFormComponent,
-    PageLoginComponent
+    PageLoginComponent,
+    LoginFormComponent,
+    ShoppingCartTableComponent
   ],
   imports: [
     BrowserModule,
