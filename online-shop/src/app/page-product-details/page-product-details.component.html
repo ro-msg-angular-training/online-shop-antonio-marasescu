@@ -1,11 +1,15 @@
 <div class="container" *ngIf="product">
+
   <h1>Product: {{product.name}}</h1>
+  <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart">
+    The product was added to the cart!
+  </div>
   <div class="row">
     <div class="col">
-      <button type="button" class="ml-md-2 btn btn-danger float-right" data-toggle="modal"
+      <button *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-danger float-right" data-toggle="modal"
               data-target="#confirmationModal">Delete
       </button>
-      <a type="button" class="ml-md-2 btn btn-primary float-right" routerLink="./edit">Edit</a>
+      <a *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right" routerLink="./edit">Edit</a>
       <button type="button" class="btn btn-primary float-right" (click)="addToCart()">Add to Cart</button>
     </div>
   </div>

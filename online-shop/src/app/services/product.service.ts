@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
-import {Product} from './models/product';
-import {Observable, of} from 'rxjs';
+import {Product} from '../models/product';
+import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {AppConfig} from '../app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'http://localhost:3000/products';
+  private productsUrl = AppConfig.API_ENDPOINT + '/products';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

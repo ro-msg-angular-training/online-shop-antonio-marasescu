@@ -15,6 +15,7 @@ import {PageProductEditComponent} from './page-product-edit/page-product-edit.co
 import {PageProductAddComponent} from './page-product-add/page-product-add.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ProductFormComponent} from './product-form/product-form.component';
+import { PageLoginComponent } from './page-login/page-login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ProductFormComponent} from './product-form/product-form.component';
     PageShoppingCartComponent,
     PageProductEditComponent,
     PageProductAddComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    PageLoginComponent
   ],
   imports: [
     BrowserModule,

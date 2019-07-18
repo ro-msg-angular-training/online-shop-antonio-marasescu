@@ -1,6 +1,7 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Product} from '../models/product';
-import {ProductService} from '../product.service';
+import {ProductService} from '../services/product.service';
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-page-product-list',
@@ -10,7 +11,8 @@ import {ProductService} from '../product.service';
 export class PageProductListComponent implements OnInit {
   @Input() products: Product[];
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private authService: AuthService) {
   }
 
   ngOnInit() {

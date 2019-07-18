@@ -1,6 +1,6 @@
-import {ChangeDetectorRef, Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ShoppingCartItem} from '../models/shopping-cart-item';
-import {ShoppingCartService} from '../shopping-cart.service';
+import {ShoppingCartService} from '../services/shopping-cart.service';
 
 @Component({
   selector: 'app-page-shopping-cart',
@@ -9,6 +9,7 @@ import {ShoppingCartService} from '../shopping-cart.service';
 })
 export class PageShoppingCartComponent implements OnInit {
   @Input() shoppingCartItems: ShoppingCartItem[];
+  private wasOrderCreated: boolean;
 
   constructor(private shoppingCartService: ShoppingCartService) {
   }
@@ -17,17 +18,14 @@ export class PageShoppingCartComponent implements OnInit {
     this.loadShoppingCart();
   }
 
-  changeQuantity(productId: number, newQuantity: number): void {
-
-  }
-
   loadShoppingCart() {
     this.shoppingCartItems = this.shoppingCartService.getShoppingCartItems();
+    this.wasOrderCreated = false;
   }
 
   checkoutOrder(): void {
     this.shoppingCartService.placeOrder().subscribe();
-    this.shoppingCartItems = this.shoppingCartService.getShoppingCartItems();
+    this.loadShoppingCart();
   }
 
   removeItem(productId: number): void {

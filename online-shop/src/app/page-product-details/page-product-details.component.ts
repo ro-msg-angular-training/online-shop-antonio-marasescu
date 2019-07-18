@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from "../models/product";
-import {ActivatedRoute, Router} from "@angular/router";
-import {ProductService} from "../product.service";
-import {ShoppingCartService} from "../shopping-cart.service";
+import {Product} from '../models/product';
+import {ActivatedRoute, Router} from '@angular/router';
+import {ProductService} from '../services/product.service';
+import {ShoppingCartService} from '../services/shopping-cart.service';
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-page-product-details',
@@ -12,15 +13,18 @@ import {ShoppingCartService} from "../shopping-cart.service";
 export class PageProductDetailsComponent implements OnInit {
 
   @Input() product: Product;
+  private wasAddedToTheCart: boolean;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
+    private authService: AuthService,
     private shoppingCartService: ShoppingCartService) {
   }
 
   ngOnInit() {
+    this.wasAddedToTheCart = false;
     this.getProduct();
   }
 
@@ -30,15 +34,13 @@ export class PageProductDetailsComponent implements OnInit {
   }
 
   delete(): void {
+    this.shoppingCartService.removeItem(this.product.id);
     this.productService.removeProduct(this.product.id).subscribe(() => this.router.navigateByUrl('/products'));
-  }
-
-  edit(): void {
-    alert('Do nothing!....Yet');
   }
 
   addToCart(): void {
     this.shoppingCartService.addItem(this.product);
+    this.wasAddedToTheCart = true;
   }
 
 }

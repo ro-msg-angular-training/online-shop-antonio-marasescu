@@ -1,16 +1,17 @@
 import {Injectable} from '@angular/core';
-import {Product} from './models/product';
-import {ShoppingCartItem} from './models/shopping-cart-item';
+import {Product} from '../models/product';
+import {ShoppingCartItem} from '../models/shopping-cart-item';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {OrderInput} from './models/order-input';
+import {OrderInput} from '../models/order-input';
+import {AppConfig} from '../app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCartService {
   private shoppingCart: ShoppingCartItem[] = [];
-  private ordersUrl = 'http://localhost:3000/orders';
+  private ordersUrl = AppConfig.API_ENDPOINT + '/orders';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
