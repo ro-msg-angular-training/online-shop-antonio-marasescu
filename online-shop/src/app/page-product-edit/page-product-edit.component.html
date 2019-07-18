@@ -1,4 +1,7 @@
-<div class="container" *ngIf="product">
+<div class="container" *ngIf="product; else loadingComponent">
   <h1>Product Edit</h1>
   <app-product-form [product]="product" (submitProductData)="editProduct($event)"></app-product-form>
 </div>
+<ng-template #loadingComponent>
+  <app-background-loading></app-background-loading>
+</ng-template>

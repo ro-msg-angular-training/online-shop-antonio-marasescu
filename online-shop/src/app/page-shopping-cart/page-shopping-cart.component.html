@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="shoppingCartItems; else loadingComponent">
   <h1>Shopping Cart</h1>
   <div class="alert alert-success" role="alert" *ngIf="wasOrderCreated">
     Your order was created!
@@ -17,3 +17,6 @@
     </div>
   </ng-template>
 </div>
+<ng-template #loadingComponent>
+  <app-background-loading></app-background-loading>
+</ng-template>

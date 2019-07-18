@@ -1,4 +1,4 @@
-<div class="container" *ngIf="products">
+<div class="container" *ngIf="products; else loadingComponent">
   <h1>Products</h1>
   <span class="float-right mb-md-2">
     <button *ngIf="authService.isAdmin" type="button" class="btn btn-secondary"
@@ -8,3 +8,6 @@
   </span>
   <app-product-table [dataList]="products" [headers]="['Category', 'Product Name', 'Price', '']"></app-product-table>
 </div>
+<ng-template #loadingComponent>
+  <app-background-loading></app-background-loading>
+</ng-template>

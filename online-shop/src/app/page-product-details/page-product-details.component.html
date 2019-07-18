@@ -1,5 +1,4 @@
-<div class="container" *ngIf="product">
-
+<div class="container" *ngIf="product; else loadingComponent">
   <h1>Product: {{product.name}}</h1>
   <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart">
     The product was added to the cart!
@@ -18,3 +17,6 @@
                           [modalText]="'Are you sure you want to remove this product?'"></app-confirmation-modal>
   <app-product-detail [product]="product"></app-product-detail>
 </div>
+<ng-template #loadingComponent>
+  <app-background-loading></app-background-loading>
+</ng-template>

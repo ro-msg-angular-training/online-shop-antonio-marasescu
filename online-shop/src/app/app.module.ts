@@ -18,6 +18,8 @@ import {ProductFormComponent} from './product-form/product-form.component';
 import {PageLoginComponent} from './page-login/page-login.component';
 import {LoginFormComponent} from './page-login/login-form/login-form.component';
 import {ShoppingCartTableComponent} from './page-shopping-cart/shopping-cart-table/shopping-cart-table.component';
+import { BackgroundLoadingComponent } from './background-loading/background-loading.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,12 @@ import {ShoppingCartTableComponent} from './page-shopping-cart/shopping-cart-tab
     ProductFormComponent,
     PageLoginComponent,
     LoginFormComponent,
-    ShoppingCartTableComponent
+    ShoppingCartTableComponent,
+    BackgroundLoadingComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
