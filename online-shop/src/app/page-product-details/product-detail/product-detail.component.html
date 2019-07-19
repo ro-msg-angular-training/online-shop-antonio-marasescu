@@ -1,10 +1,15 @@
-<div class="row pt-md-3">
-  <div class="col">
-    <img [src]="product.image" width="250px"
-         class="img-thumbnail float-right" alt="A overpriced Phone">
-    <p>Name {{product.name}}</p>
-    <p>Category {{product.category}}</p>
-    <p>Price {{product.price}}</p>
-    <p>Description {{product.description}}</p>
-  </div>
+<mat-card class="container mat-elevation-z8 mt-md-4">
+  <h1 class="mat-h1"><b>{{product.name}}</b></h1>
+  <mat-card-content>
+    <img mat-card-image [src]="product.image" alt="{{product.name}}" class="text-center">
+  </mat-card-content>
+</mat-card>
+<div class="mt-md-2">
+  <h1 class="mat-h1"><b>Category:</b></h1>
+  <h3 class="mat-h3">{{product.category}}</h3>
+  <h1 class="mat-h1"><b>Price:</b></h1>
+  <h3 class="mat-h3">{{product.price}}</h3>
+  <h1 class="mat-h1"><b>Description</b></h1>
+  <p>{{product.description}}</p>
 </div>
+

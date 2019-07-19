@@ -1,10 +1,15 @@
-<div class="container pt-md-3">
-  <div class="card bg-dark text-white">
-    <div class="card-header border-light">
-      <h1 class="h1 pt-md-1 text-center">Login</h1>
-    </div>
-    <div class="card-body">
-      <app-login-form (submitData)="submit($event)" [errorMessage]="errorMessage"></app-login-form>
-    </div>
-  </div>
-</div>
+<mat-card class="container w-50 mt-md-5 mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title >
+      <span>
+        Sing In
+        <mat-icon aria-hidden="false" aria-label="Person icon" class="align-middle">person</mat-icon>
+      </span>
+
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-divider></mat-divider>
+    <app-login-form (submitData)="submit($event)" [errorMessage]="errorMessage"></app-login-form>
+  </mat-card-content>
+</mat-card>

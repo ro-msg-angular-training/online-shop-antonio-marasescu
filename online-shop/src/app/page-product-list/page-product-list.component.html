@@ -1,12 +1,31 @@
-<div class="container" *ngIf="products; else loadingComponent">
-  <h1>Products</h1>
-  <span class="float-right mb-md-2">
-    <button *ngIf="authService.isAdmin" type="button" class="btn btn-secondary"
-            routerLink="./add">Create Product</button>
-    <a *ngIf="authService.isCustomer" type="button" class="btn btn-secondary ml-md-1" routerLink="/cart"><i
-      class="fa fa-shopping-cart"></i></a>
-  </span>
-  <app-product-table [dataList]="products" [headers]="['Category', 'Product Name', 'Price', '']"></app-product-table>
+<div class="container-fluid w-75" *ngIf="products; else loadingComponent">
+  <div class="mat-headline mt-md-5">Products
+    <div class="float-right">
+      <button mat-raised-button color="primary" *ngIf="authService.isAdmin" type="button" class="btn btn-secondary"
+              routerLink="./add">Create Product
+      </button>
+      <a mat-raised-button *ngIf="authService.isCustomer" type="button" class="btn btn-secondary ml-md-1"
+         routerLink="/cart"><i
+        class="fa fa-shopping-cart"></i></a>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <table mat-table [dataSource]="products" class="mat-elevation-z8 w-100 mt-md-1">
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef> Category</th>
+      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name</th>
+      <td mat-cell *matCellDef="let element"><a routerLink="/products/{{element.id}}">{{element.name}}</a></td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price</th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="productListHeaders; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: productListHeaders;"></tr>
+  </table>
 </div>
 <ng-template #loadingComponent>
   <app-background-loading></app-background-loading>

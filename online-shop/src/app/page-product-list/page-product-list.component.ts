@@ -1,7 +1,7 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../models/product';
 import {ProductService} from '../services/product.service';
-import {AuthService} from "../services/auth.service";
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-page-product-list',
@@ -10,7 +10,8 @@ import {AuthService} from "../services/auth.service";
 })
 export class PageProductListComponent implements OnInit {
   @Input() products: Product[];
-
+  private productListHeaders = ['category', 'name', 'price'];
+  
   constructor(private productService: ProductService,
               private authService: AuthService) {
   }
