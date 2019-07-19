@@ -1,4 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-confirmation-modal',
@@ -6,14 +8,12 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./confirmation-modal.component.css']
 })
 export class ConfirmationModalComponent {
-  @Output() public confirm: EventEmitter<any> = new EventEmitter<any>();
-  @Input() modalText: string;
-  @Input() modalId: string;
 
-  constructor() {
+  constructor(public dialogRef: MatDialogRef<ConfirmationModalComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: string) {
   }
 
-  onInternalConfirm(): void {
-    this.confirm.emit();
+  onCancelDelete() {
+    this.dialogRef.close();
   }
 }

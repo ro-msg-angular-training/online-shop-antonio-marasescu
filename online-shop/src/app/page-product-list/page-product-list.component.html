@@ -10,22 +10,7 @@
     </div>
   </div>
   <mat-divider></mat-divider>
-  <table mat-table [dataSource]="products" class="mat-elevation-z8 w-100 mt-md-1">
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef> Category</th>
-      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name</th>
-      <td mat-cell *matCellDef="let element"><a routerLink="/products/{{element.id}}">{{element.name}}</a></td>
-    </ng-container>
-    <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef> Price</th>
-      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="productListHeaders; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: productListHeaders;"></tr>
-  </table>
+  <app-product-table [dataList]="products"></app-product-table>
 </div>
 <ng-template #loadingComponent>
   <app-background-loading></app-background-loading>

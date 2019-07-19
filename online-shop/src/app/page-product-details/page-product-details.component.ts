@@ -4,6 +4,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from '../services/product.service';
 import {ShoppingCartService} from '../services/shopping-cart.service';
 import {AuthService} from '../services/auth.service';
+import {MatDialog} from '@angular/material/dialog';
+import {ConfirmationModalComponent} from './confirmation-modal/confirmation-modal.component';
 
 @Component({
   selector: 'app-page-product-details',
@@ -16,6 +18,7 @@ export class PageProductDetailsComponent implements OnInit {
   private wasAddedToTheCart: boolean;
 
   constructor(
+    public dialog: MatDialog,
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
@@ -34,8 +37,16 @@ export class PageProductDetailsComponent implements OnInit {
   }
 
   delete(): void {
-    this.shoppingCartService.removeItem(this.product.id);
-    this.productService.removeProduct(this.product.id).subscribe(() => this.router.navigateByUrl('/products'));
+    const dialogRef = this.dialog.open(ConfirmationModalComponent, {
+      width: '500px',
+      data: this.product.name
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.shoppingCartService.removeItem(this.product.id);
+        this.productService.removeProduct(this.product.id).subscribe(() => this.router.navigateByUrl('/products'));
+      }
+    });
   }
 
   addToCart(): void {

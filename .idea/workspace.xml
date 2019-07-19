@@ -3,27 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="6342bd2e-b63f-41a0-8a60-f7e918c6e178" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-shop/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,39 +31,43 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.module.ts">
+        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+              <folding>
+                <element signature="e#0#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.html">
+        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-            </state>
+            <state relative-caret-position="-177" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.html">
+        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="255">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css">
+        <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="102">
+              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!block;n#constructor#0;n#PageShoppingCartComponent#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,9 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/product.service.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/shopping-cart.service.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/app.component.ts" />
@@ -107,20 +104,12 @@
         <option value="$PROJECT_DIR$/online-shop/src/app/guards/auth-guard.guard.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/mockup-product.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-not-found/page-not-found.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/services/shopping-cart.service.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/background-loading/background-loading.component.css" />
         <option value="$PROJECT_DIR$/online-shop/src/app/background-loading/background-loading.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/background-loading/background-loading.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.css" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.ts" />
@@ -129,21 +118,32 @@
         <option value="$PROJECT_DIR$/online-shop/src/index.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/guards/auth.guard.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.css" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.css" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.css" />
         <option value="$PROJECT_DIR$/online-shop/src/styles.css" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css" />
-        <option value="$PROJECT_DIR$/online-shop/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html" />
         <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.css" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html" />
+        <option value="$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html" />
       </list>
     </option>
   </component>
@@ -189,7 +189,7 @@
               <item name="online-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="page-login" type="462c0819:PsiDirectoryNode" />
+              <item name="page-shopping-cart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online-shop-antonio-marasescu" type="b2602c69:ProjectViewProjectNode" />
@@ -197,15 +197,8 @@
               <item name="online-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="page-product-details" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-shop-antonio-marasescu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-shop-antonio-marasescu" type="462c0819:PsiDirectoryNode" />
-              <item name="online-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="page-product-list" type="462c0819:PsiDirectoryNode" />
+              <item name="page-shopping-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping-cart-table" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,15 +212,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/online-shop/src" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="D:\Projects\Angular\online-shop-antonio-marasescu\online-shop\src" />
+    <property name="node.js.selected.package.standard" value="D:\Projects\Angular\online-shop-antonio-marasescu\online-shop\src" />
+    <property name="node.js.selected.package.tslint" value="D:\Projects\Angular\online-shop-antonio-marasescu\online-shop\node_modules\tslint" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="C:\ProjectsMSG\Angular_Training\online-shop-antonio-marasescu\online-shop\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Projects\Angular\online-shop-antonio-marasescu\online-shop\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -265,14 +261,16 @@
       <workItem from="1563369475400" duration="2267000" />
       <workItem from="1563429607996" duration="23553000" />
       <workItem from="1563516735100" duration="24177000" />
+      <workItem from="1563554133631" duration="7972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92397000" />
+    <option name="totallyTimeSpent" value="100369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -287,7 +285,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29264706" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2917847" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -318,44 +316,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-not-found/page-not-found.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-not-found/page-not-found.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/services/shopping-cart.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -389,15 +349,6 @@
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-805" />
@@ -410,13 +361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="62" lean-forward="true" selection-start-column="62" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -433,23 +377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!block;n#constructor#0;n#PageShoppingCartComponent#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="70" selection-start-column="70" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -460,31 +387,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -515,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -532,34 +431,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/models/product.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -583,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -604,13 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="89" lean-forward="true" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -638,45 +499,181 @@
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/online-shop/tslint.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.html">
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="47" />
+        <state relative-caret-position="85">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/product-detail/product-detail.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state relative-caret-position="204">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/confirmation-modal/confirmation-modal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-details/page-product-details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/page-login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-login/login-form/login-form.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-edit/page-product-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-add/page-product-add.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/product-form/product-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/page-product-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-product-list/product-table/product-table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/shopping-cart-table/shopping-cart-table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#PageShoppingCartComponent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online-shop/src/app/page-shopping-cart/page-shopping-cart.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>

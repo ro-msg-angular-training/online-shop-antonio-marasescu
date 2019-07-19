@@ -5,8 +5,8 @@
   </div>
   <div *ngIf="shoppingCartItems.length>0; else emptyCartBlock">
     <span class="float-right mb-md-2">
-    <a type="button" class="btn btn-success text-light" (click)="checkoutOrder()">Checkout</a>
-  </span>
+      <a type="button" class="btn btn-success text-light" (click)="checkoutOrder()">Checkout</a>
+    </span>
     <app-shopping-cart-table (decrement)="decrementQuantity($event)" (increment)="incrementQuantity($event)"
                              (remove)="removeItem($event)"
                              [shoppingCartItems]="shoppingCartItems"></app-shopping-cart-table>

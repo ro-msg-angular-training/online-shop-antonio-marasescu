@@ -10,8 +10,8 @@ import {AuthService} from '../services/auth.service';
 })
 export class PageProductListComponent implements OnInit {
   @Input() products: Product[];
-  private productListHeaders = ['category', 'name', 'price'];
-  
+
+
   constructor(private productService: ProductService,
               private authService: AuthService) {
   }

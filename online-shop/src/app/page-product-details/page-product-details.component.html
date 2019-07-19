@@ -1,15 +1,13 @@
 <div class="container w-50 mt-md-4" *ngIf="product; else loadingComponent">
-  <app-confirmation-modal (confirm)="delete()" [modalId]="'confirmationModal'"
-                          [modalText]="'Are you sure you want to remove this product?'"></app-confirmation-modal>
   <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart">
     The product was added to the cart!
   </div>
   <div class="row">
     <div class="col">
-      <button mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-danger float-right" data-toggle="modal"
-              data-target="#confirmationModal">Delete
+      <button mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button"
+              class="ml-md-2 btn btn-danger float-right" (click)="delete()">Delete
       </button>
-      <a mat-raised-button *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right"
+      <a mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right"
          routerLink="./edit">Edit</a>
       <button mat-raised-button color="primary" type="button" class="btn btn-primary float-right" (click)="addToCart()">Add to Cart</button>
     </div>

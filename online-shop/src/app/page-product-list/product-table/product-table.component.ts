@@ -7,8 +7,8 @@ import {Product} from '../../models/product';
   styleUrls: ['./product-table.component.css']
 })
 export class ProductTableComponent {
-  @Input() headers: string[];
   @Input() dataList: Product[];
+  private productListHeaders = ['category', 'name', 'price'];
 
   constructor() {
   }

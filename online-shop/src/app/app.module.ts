@@ -26,6 +26,8 @@ import {
   MatGridListModule, MatInputModule, MatIconModule,
   MatListModule, MatSidenavModule
 } from '@angular/material';
+import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -52,10 +54,15 @@ import {
     HttpClientModule,
     ReactiveFormsModule,
     MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule,
-    MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule
+    MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule, MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
+    {provide: MatDialogRef, useValue: {}},
+    {provide: MAT_DIALOG_DATA, useValue: {}}
+    ],
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmationModalComponent]
 })
 export class AppModule {
 }

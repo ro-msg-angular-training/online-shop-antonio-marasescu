@@ -11,6 +11,7 @@ export class ShoppingCartTableComponent {
   @Output() increment: EventEmitter<any> = new EventEmitter();
   @Output() decrement: EventEmitter<any> = new EventEmitter();
   @Output() remove: EventEmitter<any> = new EventEmitter();
+  private productListHeaders = ['category', 'name', 'price', 'quantity', 'action'];
 
   constructor() {
   }
