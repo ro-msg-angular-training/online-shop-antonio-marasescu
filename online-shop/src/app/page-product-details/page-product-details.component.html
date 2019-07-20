@@ -1,15 +1,18 @@
 <div class="container w-50 mt-md-4" *ngIf="product; else loadingComponent">
-  <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart">
+  <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart" i18n="Product Added Data Message">
     The product was added to the cart!
   </div>
   <div class="row">
     <div class="col">
       <button mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button"
-              class="ml-md-2 btn btn-danger float-right" (click)="delete()">Delete
+              class="ml-md-2 btn btn-danger float-right" (click)="delete()" i18n="Delete Button">Delete
       </button>
-      <a mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button" class="ml-md-2 btn btn-primary float-right"
+      <a mat-raised-button color="warn" *ngIf="authService.isAdmin" type="button"
+         class="ml-md-2 btn btn-primary float-right"
          routerLink="./edit">Edit</a>
-      <button mat-raised-button color="primary" type="button" class="btn btn-primary float-right" (click)="addToCart()">Add to Cart</button>
+      <button mat-raised-button color="primary" type="button" class="btn btn-primary float-right" (click)="addToCart()"
+              i18n="Add to Cart Button">Add to Cart
+      </button>
     </div>
   </div>
   <app-product-detail [product]="product"></app-product-detail>

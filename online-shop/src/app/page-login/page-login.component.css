@@ -1,3 +1,6 @@
 .image-cover{
   background-size:cover;
 }
+.content-inline {
+  display: inline;
+}

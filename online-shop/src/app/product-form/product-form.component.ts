@@ -12,7 +12,7 @@ export class ProductFormComponent implements OnInit {
   @Input() product: Product;
   @Output() submitProductData: EventEmitter<any> = new EventEmitter();
 
-  private productForm = this.formBuilder.group({
+  productForm = this.formBuilder.group({
     productName: new FormControl('', [
       Validators.required
     ]),

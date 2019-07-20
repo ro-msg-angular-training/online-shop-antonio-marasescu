@@ -12,8 +12,9 @@ export class PageProductListComponent implements OnInit {
   @Input() products: Product[];
 
 
-  constructor(private productService: ProductService,
-              private authService: AuthService) {
+  constructor(
+    public authService: AuthService,
+    private productService: ProductService) {
   }
 
   ngOnInit() {

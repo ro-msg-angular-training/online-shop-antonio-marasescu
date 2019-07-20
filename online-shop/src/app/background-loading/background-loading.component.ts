@@ -25,7 +25,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class BackgroundLoadingComponent {
 
-  private state;
+  state;
 
   constructor() {
   }

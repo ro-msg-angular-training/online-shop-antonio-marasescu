@@ -1,8 +1,9 @@
 <div class="container-fluid w-75" *ngIf="products; else loadingComponent">
-  <div class="mat-headline mt-md-5">Products
+  <div class="mat-headline mt-md-5">
+    <b i18n="Page Title Products List">Products</b>
     <div class="float-right">
       <button mat-raised-button color="primary" *ngIf="authService.isAdmin" type="button" class="btn btn-secondary"
-              routerLink="./add">Create Product
+              routerLink="./add" i18n="Page Button Create Button">Create Product
       </button>
       <a mat-raised-button *ngIf="authService.isCustomer" type="button" class="btn btn-secondary ml-md-1"
          routerLink="/cart"><i

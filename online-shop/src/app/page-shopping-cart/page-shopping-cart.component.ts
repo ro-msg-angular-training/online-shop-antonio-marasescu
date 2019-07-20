@@ -9,7 +9,7 @@ import {ShoppingCartService} from '../services/shopping-cart.service';
 })
 export class PageShoppingCartComponent implements OnInit {
   @Input() shoppingCartItems: ShoppingCartItem[];
-  private wasOrderCreated: boolean;
+  wasOrderCreated: boolean;
 
   constructor(private shoppingCartService: ShoppingCartService) {
   }

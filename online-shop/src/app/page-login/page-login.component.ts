@@ -12,7 +12,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class PageLoginComponent {
 
 
-  private errorMessage: HttpErrorResponse;
+  errorMessage: HttpErrorResponse;
 
 
   constructor(private router: Router,

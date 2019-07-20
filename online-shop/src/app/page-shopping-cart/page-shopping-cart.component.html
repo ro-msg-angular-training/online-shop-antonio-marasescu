@@ -1,18 +1,18 @@
 <div class="container" *ngIf="shoppingCartItems; else loadingComponent">
   <h1>Shopping Cart</h1>
-  <div class="alert alert-success" role="alert" *ngIf="wasOrderCreated">
+  <div class="alert alert-success" role="alert" *ngIf="wasOrderCreated" i18n="Order Created Data Message">
     Your order was created!
   </div>
   <div *ngIf="shoppingCartItems.length>0; else emptyCartBlock">
     <span class="float-right mb-md-2">
-      <a type="button" class="btn btn-success text-light" (click)="checkoutOrder()">Checkout</a>
+      <a type="button" class="btn btn-success text-light" (click)="checkoutOrder()" i18n="Order Checkout Button">Checkout</a>
     </span>
     <app-shopping-cart-table (decrement)="decrementQuantity($event)" (increment)="incrementQuantity($event)"
                              (remove)="removeItem($event)"
                              [shoppingCartItems]="shoppingCartItems"></app-shopping-cart-table>
   </div>
   <ng-template #emptyCartBlock>
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-warning" role="alert" i18n="Cart Empty Data Message">
       The cart is empty!
     </div>
   </ng-template>

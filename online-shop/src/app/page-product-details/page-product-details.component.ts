@@ -15,14 +15,14 @@ import {ConfirmationModalComponent} from './confirmation-modal/confirmation-moda
 export class PageProductDetailsComponent implements OnInit {
 
   @Input() product: Product;
-  private wasAddedToTheCart: boolean;
+  wasAddedToTheCart: boolean;
 
   constructor(
+    public authService: AuthService,
     public dialog: MatDialog,
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
-    private authService: AuthService,
     private shoppingCartService: ShoppingCartService) {
   }
 

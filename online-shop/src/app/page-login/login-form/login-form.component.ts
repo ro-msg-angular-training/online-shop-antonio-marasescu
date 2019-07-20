@@ -10,7 +10,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class LoginFormComponent {
   @Input() errorMessage: HttpErrorResponse;
   @Output() submitData: EventEmitter<any> = new EventEmitter();
-  private loginForm = this.formBuilder.group({
+  loginForm = this.formBuilder.group({
     username: new FormControl('', [
       Validators.required
     ]),

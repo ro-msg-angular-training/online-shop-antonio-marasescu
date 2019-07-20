@@ -8,7 +8,7 @@ import {Product} from '../../models/product';
 })
 export class ProductTableComponent {
   @Input() dataList: Product[];
-  private productListHeaders = ['category', 'name', 'price'];
+  productListHeaders = ['category', 'name', 'price'];
 
   constructor() {
   }
