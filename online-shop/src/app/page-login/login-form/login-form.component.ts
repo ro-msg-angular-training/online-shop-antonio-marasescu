@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {HttpErrorResponse} from '@angular/common/http';
+import {AuthCredentials} from "../../models/auth-credentials";
 
 @Component({
   selector: 'app-login-form',
@@ -31,7 +32,9 @@ export class LoginFormComponent {
   }
 
   submit() {
-    const payload = {username: this.username.value, password: this.password.value};
+    const payload = new AuthCredentials();
+    payload.username = this.username.value;
+    payload.password = this.password.value;
     this.submitData.emit(payload);
   }
 }
