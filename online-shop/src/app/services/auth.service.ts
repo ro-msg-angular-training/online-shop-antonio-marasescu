@@ -8,8 +8,8 @@ import {AuthUser} from '../models/auth-user';
   providedIn: 'root'
 })
 export class AuthService {
-  private authUser: AuthUser;
   private authUrl = AppConfig.API_ENDPOINT + '/login';
+  private authUser: AuthUser;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

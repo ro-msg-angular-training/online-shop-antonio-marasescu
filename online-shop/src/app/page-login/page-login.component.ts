@@ -5,8 +5,6 @@ import {IAppState} from '../store/state/app.state';
 import {Store} from '@ngrx/store';
 import {GetAuthUser} from '../store/actions/auth-user.actions';
 import {selectErrorMessage} from '../store/selectors/auth-user.selectors';
-import {select} from '@ngrx/core';
-import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-page-login',
@@ -23,7 +21,7 @@ export class PageLoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.errorMessage$ = this.store.pipe(tap(select(selectErrorMessage)));
+    this.errorMessage$ = this.store.select(selectErrorMessage);
   }
 
   submit(payload: AuthCredentials) {

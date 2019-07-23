@@ -1,7 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../models/product';
 import {ProductService} from '../services/product.service';
-import {AuthService} from '../services/auth.service';
+import {Store} from "@ngrx/store";
+import {IAppState} from "../store/state/app.state";
+import {selectCurrentAuthUserRoles} from "../store/selectors/auth-user.selectors";
 
 @Component({
   selector: 'app-page-product-list',
@@ -10,15 +12,16 @@ import {AuthService} from '../services/auth.service';
 })
 export class PageProductListComponent implements OnInit {
   @Input() products: Product[];
-
+  userRoles$;
 
   constructor(
-    public authService: AuthService,
+    private store: Store<IAppState>,
     private productService: ProductService) {
   }
 
   ngOnInit() {
     this.getProducts();
+    this.userRoles$ = this.store.select(selectCurrentAuthUserRoles);
   }
 
   getProducts() {
