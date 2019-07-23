@@ -1,11 +1,11 @@
 import {initialUserState, IAuthUserState} from './auth-user.state';
 
 export interface IAppState {
-  userState: IAuthUserState;
+  authState: IAuthUserState;
 }
 
 export const initialAppState: IAppState = {
-  userState: initialUserState
+  authState: initialUserState
 };
 
 export function getInitialState(): IAppState {

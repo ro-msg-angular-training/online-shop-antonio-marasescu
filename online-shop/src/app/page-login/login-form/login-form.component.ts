@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {HttpErrorResponse} from '@angular/common/http';
 import {AuthCredentials} from "../../models/auth-credentials";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-login-form',
@@ -9,7 +10,7 @@ import {AuthCredentials} from "../../models/auth-credentials";
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
-  @Input() errorMessage: HttpErrorResponse;
+  @Input() errorMessage: string;
   @Output() submitData: EventEmitter<any> = new EventEmitter();
   loginForm = this.formBuilder.group({
     username: new FormControl('', [

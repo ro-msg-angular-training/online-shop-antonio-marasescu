@@ -27,6 +27,10 @@ import {
   MatListModule, MatSidenavModule
 } from '@angular/material';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {EffectsModule} from "@ngrx/effects";
+import {StoreModule} from "@ngrx/store";
+import {appReducers} from "./store/reducers/app.reducers";
+import {AuthUserEffects} from "./store/effects/auth-user.effects";
 
 
 @NgModule({
@@ -53,6 +57,8 @@ import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS, MatDialogRef, MAT_DIALOG_DA
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([AuthUserEffects]),
     MatInputModule, MatFormFieldModule, MatCardModule, MatTableModule, MatButtonModule, MatCheckboxModule,
     MatDividerModule, MatIconModule, MatGridListModule, MatListModule, MatSidenavModule, MatDialogModule
   ],

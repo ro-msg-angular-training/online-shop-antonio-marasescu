@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {AppConfig} from '../app.config';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
@@ -19,21 +19,17 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  set user(user: AuthUser) {
-    this.authUser = user;
+  set user(data) {
+    this.authUser = data;
   }
 
-  get user() {
+  get user(): AuthUser {
     return this.authUser;
   }
 
   authenticate(username: string, password: string): Observable<AuthUser> {
     const payload = {username, password};
     return this.http.post<AuthUser>(this.authUrl, payload, this.httpOptions);
-  }
-
-  logout() {
-    this.user = null;
   }
 
   get isLoggedIn(): boolean {

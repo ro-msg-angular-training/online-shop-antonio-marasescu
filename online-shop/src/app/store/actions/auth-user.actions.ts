@@ -4,7 +4,8 @@ import {AuthCredentials} from '../../models/auth-credentials';
 
 export enum EAuthUserActions {
   GetAuthUser = '[Auth-User] Get User',
-  GetAuthUserSuccess = '[Auth-User] Get User Success'
+  GetAuthUserSuccess = '[Auth-User] Get User Success',
+  GetAuthUserFailure = '[Auth-User] Get User Failure'
 }
 
 export class GetAuthUser implements Action {
@@ -21,4 +22,11 @@ export class GetAuthUserSuccess implements Action {
   }
 }
 
-export type AuthUserActions = GetAuthUser | GetAuthUserSuccess;
+export class GetAuthUserFailure implements Action {
+  public readonly type = EAuthUserActions.GetAuthUserFailure;
+
+  constructor(public payload: any) {
+  }
+}
+
+export type AuthUserActions = GetAuthUser | GetAuthUserSuccess | GetAuthUserFailure;
