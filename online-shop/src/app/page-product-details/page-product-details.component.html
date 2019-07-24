@@ -1,4 +1,4 @@
-<div class="container w-50 mt-md-4" *ngIf="product; else loadingComponent">
+<div class="container w-50 mt-md-4" *ngIf="product$| async; else loadingComponent">
   <div class="alert alert-success" role="alert" *ngIf="wasAddedToTheCart" i18n="Product Added Data Message">
     The product was added to the cart!
   </div>
@@ -15,7 +15,7 @@
       </button>
     </div>
   </div>
-  <app-product-detail [product]="product"></app-product-detail>
+  <app-product-detail [product]="product$| async"></app-product-detail>
 </div>
 <ng-template #loadingComponent>
   <app-background-loading></app-background-loading>

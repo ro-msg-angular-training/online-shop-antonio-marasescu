@@ -21,16 +21,12 @@ export class PageProductListComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private store: Store<IAppState>) {
+    this.products$ = this.store.select(selectProducts);
+    this.user$ = this.store.select(selectCurrentAuthUser);
   }
 
   ngOnInit() {
-    console.log('here 1');
-    this.products$ = this.store.select(selectProducts);
-    console.log('here 2');
-    this.user$ = this.store.select(selectCurrentAuthUser);
-    console.log('here 3');
     this.store.dispatch(new GetAllProducts());
-    console.log('here 4');
   }
 
 }

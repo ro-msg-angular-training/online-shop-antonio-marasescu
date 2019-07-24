@@ -10,7 +10,3 @@ export const initialAppState: IAppState = {
   authState: initialUserState,
   productState: initialProductState
 };
-
-export function getInitialState(): IAppState {
-  return initialAppState;
-}

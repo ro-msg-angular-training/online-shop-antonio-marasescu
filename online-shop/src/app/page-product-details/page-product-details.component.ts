@@ -6,6 +6,11 @@ import {ShoppingCartService} from '../services/shopping-cart.service';
 import {AuthService} from '../services/auth.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmationModalComponent} from './confirmation-modal/confirmation-modal.component';
+import {Observable} from "rxjs";
+import {Store} from "@ngrx/store";
+import {IAppState} from "../store/state/app.state";
+import {selectCurrentProduct} from "../store/selectors/product.selectors";
+import {GetProduct} from "../store/actions/product.actions";
 
 @Component({
   selector: 'app-page-product-details',
@@ -13,8 +18,8 @@ import {ConfirmationModalComponent} from './confirmation-modal/confirmation-moda
   styleUrls: ['./page-product-details.component.css']
 })
 export class PageProductDetailsComponent implements OnInit {
-
-  @Input() product: Product;
+  product$: Observable<Product>;
+  actualProduct: Product;
   wasAddedToTheCart: boolean;
 
   constructor(
@@ -23,34 +28,37 @@ export class PageProductDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
-    private shoppingCartService: ShoppingCartService) {
+    private shoppingCartService: ShoppingCartService,
+    private store: Store<IAppState>) {
   }
 
   ngOnInit() {
+    this.product$ = this.store.select(selectCurrentProduct);
     this.wasAddedToTheCart = false;
     this.getProduct();
   }
 
   getProduct(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id'), 10);
-    this.productService.getProduct(id).subscribe(product => this.product = product);
+    this.store.dispatch(new GetProduct(id));
+    this.product$.subscribe(product => this.actualProduct = product);
   }
 
   delete(): void {
     const dialogRef = this.dialog.open(ConfirmationModalComponent, {
       width: '500px',
-      data: this.product.name
+      data: this.actualProduct.name
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.shoppingCartService.removeItem(this.product.id);
-        this.productService.removeProduct(this.product.id).subscribe(() => this.router.navigateByUrl('/products'));
+        this.shoppingCartService.removeItem(this.actualProduct.id);
+        this.productService.removeProduct(this.actualProduct.id).subscribe(() => this.router.navigateByUrl('/products'));
       }
     });
   }
 
   addToCart(): void {
-    this.shoppingCartService.addItem(this.product);
+    this.shoppingCartService.addItem(this.actualProduct);
     this.wasAddedToTheCart = true;
   }
 

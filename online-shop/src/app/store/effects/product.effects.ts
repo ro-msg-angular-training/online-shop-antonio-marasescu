@@ -6,13 +6,13 @@ import {ProductService} from '../../services/product.service';
 import {
   CreateProduct, CreateProductSuccess,
   EProductActions,
-  GetAllProducts,
-  GetAllProductsSuccess,
+  GetAllProducts, GetAllProductsSuccess,
   GetProduct, GetProductFailure,
   GetProductSuccess, RemoveProduct, RemoveProductSuccess, UpdateProduct, UpdateProductSuccess
 } from '../actions/product.actions';
 import {switchMap, map, catchError, tap} from 'rxjs/operators';
 import {of} from 'rxjs';
+import {Product} from '../../models/product';
 
 @Injectable()
 export class ProductEffects {
@@ -25,16 +25,8 @@ export class ProductEffects {
   @Effect()
   getAllProducts$ = this.actions$.pipe(
     ofType<GetAllProducts>(EProductActions.GetAllProducts),
-    tap(() => {
-      console.log('aawr');
-      return this.productService.getAllProducts().pipe(
-        map(response => new GetAllProductsSuccess(response)),
-        catchError(error => {
-          console.log('error');
-          return of(error);
-        })
-      );
-    }),
+    switchMap(() => this.productService.getAllProducts()),
+    switchMap((response: Product[]) => of(new GetAllProductsSuccess(response))),
   );
 
   @Effect()
