@@ -1,8 +1,9 @@
-<div class="container-fluid w-75" *ngIf="products; else loadingComponent">
+<div class="container-fluid w-75" *ngIf="products$| async; else loadingComponent">
   <div class="mat-headline mt-md-5">
     <b i18n="Page Title Products List">Products</b>
     <div class="float-right">
-      <button mat-raised-button color="primary" *ngIf="authService.isAdmin(user$ | async)" type="button" class="btn btn-secondary"
+      <button mat-raised-button color="primary" *ngIf="authService.isAdmin(user$ | async)" type="button"
+              class="btn btn-secondary"
               routerLink="./add" i18n="Page Button Create Button">Create Product
       </button>
       <a mat-raised-button *ngIf="authService.isCustomer(user$ | async)" type="button" class="btn btn-secondary ml-md-1"
@@ -11,7 +12,7 @@
     </div>
   </div>
   <mat-divider></mat-divider>
-  <app-product-table [dataList]="products"></app-product-table>
+  <app-product-table [dataList]="products$| async"></app-product-table>
 </div>
 <ng-template #loadingComponent>
   <app-background-loading></app-background-loading>

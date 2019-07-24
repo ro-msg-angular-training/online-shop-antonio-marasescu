@@ -4,6 +4,7 @@ import {Product} from '../../models/product';
 export enum EProductActions {
   GetAllProducts = '[Product] Get All Products',
   GetAllProductsSuccess = '[Product] Get All Products Success',
+  GetAllProductsFailure = '[Product] Get All Products Failure',
   GetProduct = '[Product] Get Product',
   GetProductSuccess = '[Product] Get Product Success',
   GetProductFailure = '[Product] Get Product Failure',
@@ -12,8 +13,7 @@ export enum EProductActions {
   UpdateProduct = '[Product] Update Product',
   UpdateProductSuccess = '[Product] Update Product Success',
   CreateProduct = '[Product] Create Product',
-  CreateProductSuccess = '[Product] Create Product Success',
-  ChangeCurrentProduct = '[Product] Change Current Product'
+  CreateProductSuccess = '[Product] Create Product Success'
 }
 
 export class GetAllProducts implements Action {
@@ -25,6 +25,13 @@ export class GetAllProducts implements Action {
 
 export class GetAllProductsSuccess implements Action {
   public readonly type = EProductActions.GetAllProductsSuccess;
+
+  constructor(public payload: Product[]) {
+  }
+}
+
+export class GetAllProductsFailure implements Action {
+  public readonly type = EProductActions.GetAllProductsFailure;
 
   constructor(public payload: Product[]) {
   }
@@ -61,7 +68,7 @@ export class RemoveProduct implements Action {
 export class RemoveProductSuccess implements Action {
   public readonly type = EProductActions.RemoveProductSuccess;
 
-  constructor() {
+  constructor(public payload: number) {
   }
 }
 
@@ -93,16 +100,10 @@ export class CreateProductSuccess implements Action {
   }
 }
 
-export class ChangeCurrentProduct implements Action {
-  public readonly type = EProductActions.ChangeCurrentProduct;
-
-  constructor(public payload: number) {
-  }
-}
-
 export type ProductActions =
   GetAllProducts
   | GetAllProductsSuccess
+  | GetAllProductsFailure
   | GetProduct
   | GetProductSuccess
   | GetProductFailure
@@ -111,5 +112,4 @@ export type ProductActions =
   | UpdateProduct
   | UpdateProductSuccess
   | CreateProduct
-  | CreateProductSuccess
-  | ChangeCurrentProduct;
+  | CreateProductSuccess;

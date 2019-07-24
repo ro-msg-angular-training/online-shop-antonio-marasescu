@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 import {ProductService} from '../../services/product.service';
 import {
   CreateProduct, CreateProductSuccess,
@@ -17,16 +18,25 @@ import {of} from 'rxjs';
 export class ProductEffects {
   constructor(private productService: ProductService,
               private actions$: Actions,
+              private location: Location,
               private router: Router) {
   }
 
   @Effect()
   getAllProducts$ = this.actions$.pipe(
     ofType<GetAllProducts>(EProductActions.GetAllProducts),
-    tap(() => this.productService.getAllProducts().pipe(
-      map(response => new GetAllProductsSuccess(response))
-    )),
+    tap(() => {
+      console.log('aawr');
+      return this.productService.getAllProducts().pipe(
+        map(response => new GetAllProductsSuccess(response)),
+        catchError(error => {
+          console.log('error');
+          return of(error);
+        })
+      );
+    }),
   );
+
   @Effect()
   getProduct$ = this.actions$.pipe(
     ofType<GetProduct>(EProductActions.GetProduct),
@@ -42,8 +52,14 @@ export class ProductEffects {
     ofType<RemoveProduct>(EProductActions.RemoveProduct),
     map(action => action.payload),
     switchMap(id => this.productService.removeProduct(id).pipe(
-      map(() => new RemoveProductSuccess())
+      map(() => new RemoveProductSuccess(id))
     ))
+  );
+
+  @Effect()
+  removeProductSuccess$ = this.actions$.pipe(
+    ofType<RemoveProductSuccess>(EProductActions.RemoveProductSuccess),
+    tap(() => this.router.navigateByUrl('/'))
   );
 
   @Effect()
@@ -54,6 +70,13 @@ export class ProductEffects {
       map(response => new UpdateProductSuccess(response))
     ))
   );
+
+  @Effect()
+  updateProductSuccess$ = this.actions$.pipe(
+    ofType<UpdateProductSuccess>(EProductActions.UpdateProductSuccess),
+    tap(() => this.location.back())
+  );
+
 
   @Effect()
   createProduct$ = this.actions$.pipe(

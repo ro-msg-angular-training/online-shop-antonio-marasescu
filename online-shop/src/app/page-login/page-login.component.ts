@@ -5,6 +5,7 @@ import {IAppState} from '../store/state/app.state';
 import {Store} from '@ngrx/store';
 import {GetAuthUser} from '../store/actions/auth-user.actions';
 import {selectErrorMessage} from '../store/selectors/auth-user.selectors';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-page-login',
@@ -13,7 +14,7 @@ import {selectErrorMessage} from '../store/selectors/auth-user.selectors';
 })
 export class PageLoginComponent implements OnInit {
 
-  errorMessage$;
+  errorMessage$: Observable<any>;
 
 
   constructor(private router: Router,
