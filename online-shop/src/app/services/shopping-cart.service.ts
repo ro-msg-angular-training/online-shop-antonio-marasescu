@@ -5,7 +5,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {OrderInput} from '../models/order-input';
 import {AppConfig} from '../app.config';
-import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +18,7 @@ export class ShoppingCartService {
     })
   };
 
-  constructor(private http: HttpClient,
-              private authService: AuthService) {
+  constructor(private http: HttpClient) {
   }
 
   getShoppingCartItems(): ShoppingCartItem[] {
@@ -31,9 +29,9 @@ export class ShoppingCartService {
     this.shoppingCart.clear();
   }
 
-  placeOrder(): Observable<{}> {
+  placeOrder(user): Observable<{}> {
     const order = new OrderInput();
-    order.customer = this.authService.user.username;
+    order.customer = user.username;
     order.products = this.getShoppingCartItems().map((item) => ({productId: item.product.id, quantity: item.quantity}));
     return this.http.post<OrderInput>(this.ordersUrl, order, this.httpOptions);
   }

@@ -24,7 +24,6 @@ export class AuthUserEffects {
     ofType<GetAuthUserSuccess>(EAuthUserActions.GetAuthUserSuccess),
     tap(
       (user) => {
-        this.authService.user = user.payload;
         this.router.navigateByUrl('/');
       }
     )
@@ -33,9 +32,7 @@ export class AuthUserEffects {
   @Effect({dispatch: false})
   getAuthUserFailure$ = this.actions$.pipe(
     ofType<GetAuthUserFailure>(EAuthUserActions.GetAuthUserFailure),
-    tap(() => {
-      this.authService.user = null;
-    })
+    tap(() => {})
   );
 
   constructor(

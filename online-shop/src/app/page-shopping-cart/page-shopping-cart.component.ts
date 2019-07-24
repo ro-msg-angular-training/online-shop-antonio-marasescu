@@ -1,6 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ShoppingCartItem} from '../models/shopping-cart-item';
 import {ShoppingCartService} from '../services/shopping-cart.service';
+import {AuthService} from "../services/auth.service";
+import {Store} from "@ngrx/store";
+import {IAppState} from "../store/state/app.state";
+import {selectCurrentAuthUser} from "../store/selectors/auth-user.selectors";
+import {AuthUser} from "../models/auth-user";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-page-shopping-cart',
@@ -10,12 +16,18 @@ import {ShoppingCartService} from '../services/shopping-cart.service';
 export class PageShoppingCartComponent implements OnInit {
   @Input() shoppingCartItems: ShoppingCartItem[];
   wasOrderCreated: boolean;
+  currentUser: AuthUser;
+  user$: Observable<any>;
 
-  constructor(private shoppingCartService: ShoppingCartService) {
+  constructor(private shoppingCartService: ShoppingCartService,
+              private store: Store<IAppState>) {
   }
 
   ngOnInit() {
     this.loadShoppingCart();
+    this.user$ = this.store.select(selectCurrentAuthUser);
+
+    this.user$.subscribe((user) => this.currentUser = user);
   }
 
   loadShoppingCart() {
@@ -24,7 +36,7 @@ export class PageShoppingCartComponent implements OnInit {
   }
 
   checkoutOrder(): void {
-    this.shoppingCartService.placeOrder().subscribe(() => this.shoppingCartService.clearShoppingCart());
+    this.shoppingCartService.placeOrder(this.currentUser).subscribe(() => this.shoppingCartService.clearShoppingCart());
     this.loadShoppingCart();
   }
 

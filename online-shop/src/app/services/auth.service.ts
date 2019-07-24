@@ -9,7 +9,6 @@ import {AuthUser} from '../models/auth-user';
 })
 export class AuthService {
   private authUrl = AppConfig.API_ENDPOINT + '/login';
-  private authUser: AuthUser;
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -19,32 +18,20 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  set user(data) {
-    this.authUser = data;
-  }
-
-  get user(): AuthUser {
-    return this.authUser;
-  }
-
   authenticate(username: string, password: string): Observable<AuthUser> {
     const payload = {username, password};
     return this.http.post<AuthUser>(this.authUrl, payload, this.httpOptions);
   }
 
-  get isLoggedIn(): boolean {
-    return !!this.user;
+  isAdmin(user): boolean {
+    return user.roles.includes(AppConfig.ROLE_ADMIN);
   }
 
-  get isAdmin(): boolean {
-    return this.user.roles.includes(AppConfig.ROLE_ADMIN);
+  isUser(user): boolean {
+    return user.roles.includes(AppConfig.ROLE_USER);
   }
 
-  get isUser(): boolean {
-    return this.user.roles.includes(AppConfig.ROLE_USER);
-  }
-
-  get isCustomer(): boolean {
-    return this.user.roles.includes(AppConfig.ROLE_CUSTOMER);
+  isCustomer(user): boolean {
+    return user.roles.includes(AppConfig.ROLE_CUSTOMER);
   }
 }

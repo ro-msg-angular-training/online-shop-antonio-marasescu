@@ -17,7 +17,7 @@ import {AuthUser} from '../models/auth-user';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  private userState$;
+  private userState$: Observable<any>;
   private user: AuthUser;
 
   constructor(private router: Router,
