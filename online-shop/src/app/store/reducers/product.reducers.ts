@@ -24,6 +24,7 @@ export const productReducers = (state: IProductState = initialProductState, acti
         products: state.products.filter(p => p.id !== action.payload)
       };
     case EProductActions.UpdateProductSuccess:
+      console.log(action.payload);
       const index = state.products.findIndex(p => p.id === action.payload.id);
       if (index === -1) {
         return state;

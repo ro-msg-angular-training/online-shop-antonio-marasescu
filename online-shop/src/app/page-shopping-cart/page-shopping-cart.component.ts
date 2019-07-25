@@ -1,12 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ShoppingCartItem} from '../models/shopping-cart-item';
 import {ShoppingCartService} from '../services/shopping-cart.service';
-import {AuthService} from "../services/auth.service";
-import {Store} from "@ngrx/store";
-import {IAppState} from "../store/state/app.state";
-import {selectCurrentAuthUser} from "../store/selectors/auth-user.selectors";
-import {AuthUser} from "../models/auth-user";
-import {Observable} from "rxjs";
+import {Store} from '@ngrx/store';
+import {IAppState} from '../store/state/app.state';
+import {selectCurrentAuthUser} from '../store/selectors/auth-user.selectors';
+import {AuthUser} from '../models/auth-user';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-page-shopping-cart',

@@ -1,16 +1,15 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from '../models/product';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ProductService} from '../services/product.service';
 import {ShoppingCartService} from '../services/shopping-cart.service';
 import {AuthService} from '../services/auth.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmationModalComponent} from './confirmation-modal/confirmation-modal.component';
-import {Observable} from "rxjs";
-import {Store} from "@ngrx/store";
-import {IAppState} from "../store/state/app.state";
-import {selectCurrentProduct} from "../store/selectors/product.selectors";
-import {GetProduct} from "../store/actions/product.actions";
+import {Observable} from 'rxjs';
+import {Store} from '@ngrx/store';
+import {IAppState} from '../store/state/app.state';
+import {selectCurrentProduct} from '../store/selectors/product.selectors';
+import {GetProduct, RemoveProduct} from '../store/actions/product.actions';
 
 @Component({
   selector: 'app-page-product-details',
@@ -27,7 +26,6 @@ export class PageProductDetailsComponent implements OnInit {
     public dialog: MatDialog,
     private route: ActivatedRoute,
     private router: Router,
-    private productService: ProductService,
     private shoppingCartService: ShoppingCartService,
     private store: Store<IAppState>) {
   }
@@ -51,8 +49,7 @@ export class PageProductDetailsComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.shoppingCartService.removeItem(this.actualProduct.id);
-        this.productService.removeProduct(this.actualProduct.id).subscribe(() => this.router.navigateByUrl('/products'));
+        this.store.dispatch(new RemoveProduct(this.actualProduct.id));
       }
     });
   }

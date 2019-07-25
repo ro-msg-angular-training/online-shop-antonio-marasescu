@@ -48,10 +48,10 @@ export class ProductEffects {
     ))
   );
 
-  @Effect()
+  @Effect({dispatch: false})
   removeProductSuccess$ = this.actions$.pipe(
     ofType<RemoveProductSuccess>(EProductActions.RemoveProductSuccess),
-    tap(() => this.router.navigateByUrl('/'))
+    tap(() => this.router.navigateByUrl('/products'))
   );
 
   @Effect()
@@ -59,11 +59,11 @@ export class ProductEffects {
     ofType<UpdateProduct>(EProductActions.UpdateProduct),
     map(action => action.payload),
     switchMap(editedProduct => this.productService.editProduct(editedProduct.id, editedProduct).pipe(
-      map(response => new UpdateProductSuccess(response))
+      map(() => new UpdateProductSuccess(editedProduct))
     ))
   );
 
-  @Effect()
+  @Effect({dispatch: false})
   updateProductSuccess$ = this.actions$.pipe(
     ofType<UpdateProductSuccess>(EProductActions.UpdateProductSuccess),
     tap(() => this.location.back())
@@ -79,4 +79,9 @@ export class ProductEffects {
     ))
   );
 
+  @Effect({dispatch: false})
+  createProductSuccess$ = this.actions$.pipe(
+    ofType<CreateProductSuccess>(EProductActions.CreateProductSuccess),
+    tap(() => this.location.back())
+  );
 }
