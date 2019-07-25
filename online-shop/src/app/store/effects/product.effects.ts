@@ -59,7 +59,7 @@ export class ProductEffects {
     ofType<UpdateProduct>(EProductActions.UpdateProduct),
     map(action => action.payload),
     switchMap(editedProduct => this.productService.editProduct(editedProduct.id, editedProduct).pipe(
-      map(() => new UpdateProductSuccess(editedProduct))
+      map(response => new UpdateProductSuccess(editedProduct))
     ))
   );
 

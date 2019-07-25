@@ -17,24 +17,20 @@ import {selectCurrentProduct} from '../store/selectors/product.selectors';
 export class PageProductEditComponent implements OnInit {
   product$: Observable<Product>;
   private productId: number;
-
   constructor(private route: ActivatedRoute,
               private router: Router,
               private productService: ProductService,
               private location: Location,
               private store: Store<IAppState>) {
   }
-
   ngOnInit() {
     this.product$ = this.store.select(selectCurrentProduct);
     this.getProduct();
   }
-
   getProduct(): void {
     this.productId = parseInt(this.route.snapshot.paramMap.get('id'), 10);
     this.store.dispatch(new GetProduct(this.productId));
   }
-
   editProduct(editedProduct: Product) {
     editedProduct.id = this.productId;
     this.store.dispatch(new UpdateProduct(editedProduct));
