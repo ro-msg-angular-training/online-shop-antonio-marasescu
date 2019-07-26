@@ -1,15 +1,15 @@
 <mat-card class="container mat-elevation-z8 mt-md-4">
-  <h1 class="mat-h1"><b>{{product.name}}</b></h1>
+  <h1 id="productName" class="mat-h1"><b>{{product.name}}</b></h1>
   <mat-card-content>
-    <img mat-card-image [src]="product.image" alt="{{product.name}}" class="text-center">
+    <img id="productImage" mat-card-image [src]="product.image" alt="{{product.name}}" class="text-center">
   </mat-card-content>
 </mat-card>
 <div class="mt-md-2">
   <h1 class="mat-h1"><b i18n="Category Text">Category:</b></h1>
-  <h3 class="mat-h3">{{product.category}}</h3>
+  <h3 id="productCategory"  class="mat-h3">{{product.category}}</h3>
   <h1 class="mat-h1"><b i18n="Price Text">Price:</b></h1>
-  <h3 class="mat-h3">{{product.price}}</h3>
+  <h3 id="productPrice" class="mat-h3">{{product.price}}</h3>
   <h1 class="mat-h1"><b i18n="Description Text">Description</b></h1>
-  <p>{{product.description}}</p>
+  <p id="productDescription">{{product.description}}</p>
 </div>
 

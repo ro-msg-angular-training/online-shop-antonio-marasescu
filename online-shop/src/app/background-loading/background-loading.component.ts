@@ -30,7 +30,7 @@ export class BackgroundLoadingComponent {
   constructor() {
   }
 
-  onDone($event) {
+  onDone() {
     this.state = this.state === 'start' ? 'end' : 'start';
   }
 }
