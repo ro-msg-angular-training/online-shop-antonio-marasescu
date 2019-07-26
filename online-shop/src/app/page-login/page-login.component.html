@@ -1,0 +1,14 @@
+<mat-card class="container w-50 mt-md-5 mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>
+      <span i18n="Log In Card Header|Title for the login page card">
+        Sing In
+        <mat-icon aria-hidden="false" aria-label="Person icon" class="align-middle">person</mat-icon>
+      </span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-divider></mat-divider>
+    <app-login-form (submitData)="submit($event)" [errorMessage]="errorMessage$ | async"></app-login-form>
+  </mat-card-content>
+</mat-card>

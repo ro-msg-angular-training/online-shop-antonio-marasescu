@@ -1,0 +1,33 @@
+<form [formGroup]="productForm" (ngSubmit)="submitFormData()" class="form-container pt-md-2">
+  <mat-form-field class="form-group">
+    <mat-label for="productNameInput" i18n="Form Label Product Name">Product Name</mat-label>
+    <input matInput type="text" class="form-control" id="productNameInput" placeholder="Enter a product name"
+           formControlName="productName">
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label for="productCategoryInput" i18n="Form Label Product Category">Product Category</mat-label>
+    <input matInput type="text" class="form-control" id="productCategoryInput" placeholder="Enter a product category"
+           formControlName="productCategory">
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label for="productImageLinkInput" i18n="Form Label Product Image Link">Image link</mat-label>
+    <input matInput type="text" class="form-control" id="productImageLinkInput" placeholder="Enter an image link"
+           formControlName="productImageLink">
+  </mat-form-field>
+
+  <mat-form-field class="form-group">
+    <mat-label for="productPriceInput" i18n="Form Label Product Price">Product price</mat-label>
+    <input matInput type="text" class="form-control" id="productPriceInput" placeholder="Enter a product price"
+           formControlName="productPrice">
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label for="productDescriptionInput" i18n="Form Label Product Description">Product Description</mat-label>
+    <textarea matInput class="form-control" id="productDescriptionInput" rows="5"
+              formControlName="productDescription"></textarea>
+  </mat-form-field>
+  <span>
+      <button mat-raised-button color="warn" type="button" (click)="goBack()">Cancel</button>
+      <button mat-raised-button color="primary" class="ml-md-2" type="submit" [disabled]="!productForm.valid"
+              i18n="Button Save">Save</button>
+  </span>
+</form>

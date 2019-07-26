@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit()" class="form-container">
+  <mat-form-field class="mt-md-3">
+    <mat-label for="usernameInput" i18n="Form Username Label">Username</mat-label>
+    <input matInput type="text" id="usernameInput" placeholder="Username" formControlName="username">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="passwordInput" i18n="Form Password Label">Password</mat-label>
+    <input matInput type="password" id="passwordInput" placeholder="Password"
+           formControlName="password">
+  </mat-form-field>
+  <div class="alert alert-danger" role="alert" *ngIf="errorMessage" i18n="Invalid Account Data Message">
+    Invalid username or password!
+  </div>
+  <button mat-raised-button color="primary" id="submitButton" type="submit" class="btn btn-primary" i18n="Login Button">Login</button>
+</form>

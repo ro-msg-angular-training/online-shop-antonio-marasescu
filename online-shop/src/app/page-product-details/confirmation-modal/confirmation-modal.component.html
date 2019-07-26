@@ -1,0 +1,9 @@
+<h1 mat-dialog-title><em i18n="Delete Text">Delete</em> {{data}}?</h1>
+<div mat-dialog-content>
+  <p i18n="Confirmation Text|A text confirming whether are you sure you want to perform this delete product action">Are
+    you sure you want to delete this product?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onCancelDelete()" i18n="Cancel Button">Cancel</button>
+  <button mat-raised-button color="warn" mat-dialog-close="true" i18n="Confirm Button">Yes</button>
+</div>
